@@ -1,0 +1,77 @@
+.header {
+  padding: 20px; /* Reduced padding for smaller devices */
+  position: fixed;
+  right: 5px; /* Adjusted for better alignment */
+  top: 10px; /* Lowered slightly for better visibility */
+  z-index: 99999;
+
+  .button {
+    width: 50px; /* Smaller size for mobile */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3a3a3a;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger {
+    width: 100%;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 30%; /* Adjusted width for mobile */
+      margin: auto;
+      background-color: white;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    &::after {
+      top: -4px; /* Adjusted spacing for mobile */
+    }
+
+    &::before {
+      top: 4px; /* Adjusted spacing for mobile */
+    }
+  }
+
+  .burgerActive {
+    &::after {
+      transform: rotate(45deg);
+      top: 0px; /* Fine-tuned spacing */
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0px; /* Fine-tuned spacing */
+    }
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px; /* Further reduced padding for very small devices */
+    right: 5px;
+    top: 10px;
+
+    .button {
+      width: 50px; /* Smaller button for compact screens */
+      height: 50px;
+    }
+
+    .burger {
+      &::after,
+      &::before {
+        width: 25%; /* Further reduced width */
+      }
+    }
+  }
+}

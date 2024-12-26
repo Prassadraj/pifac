@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-family: "Lato", sans-serif; /* Default font */
+}
+/* Hide scrollbar for all elements */
+html {
+  overflowx: hidden; /* Hides the scrollbar entirely */
+}
+
+/* Optionally hide the scrollbar in a more controlled way */
+::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none; /* For Firefox */
+}

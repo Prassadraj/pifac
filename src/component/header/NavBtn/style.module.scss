@@ -1,0 +1,130 @@
+.menu {
+  height: 100vh;
+  background-color: rgb(41, 41, 41);
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: white;
+
+  .body {
+    box-sizing: border-box;
+    height: 100%;
+    width: 400px;
+    padding: 5px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      font-size: 56px;
+      gap: 5px;
+      margin-top: 80px;
+
+      .header {
+        color: rgb(153, 153, 153);
+        border-bottom: 1px solid rgb(153, 153, 153);
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: 300;
+      }
+    }
+  }
+}
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .menu {
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+
+    .body {
+      box-sizing: border-box;
+      height: 100%;
+      width: 450px;
+      padding: 5px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        font-size: 69px;
+        gap: 12px;
+        margin-top: 80px;
+
+        .header {
+          color: rgb(153, 153, 153);
+          border-bottom: 1px solid rgb(153, 153, 153);
+          text-transform: uppercase;
+          font-size: 11px;
+          margin-bottom: 30px;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    top: 0;
+    color: white;
+    z-index: 9999; /* Maximize z-index to ensure it overlays everything */
+    pointer-events: auto; /* Ensures interactions within the menu */
+    overflow: hidden;
+    .body {
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      z-index: 99999;
+      padding: 45px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+
+      .nav {
+        display: flex;
+        flex-direction: column;
+        font-size: 56px;
+        gap: 5px;
+        font-weight: 400;
+        margin-top: 20px;
+
+        .header {
+          color: rgb(153, 153, 153);
+          border-bottom: 1px solid rgb(153, 153, 153);
+          text-transform: uppercase;
+          font-size: 11px;
+          margin-bottom: 5px;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
